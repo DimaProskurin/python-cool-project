@@ -1,0 +1,21 @@
+version: 1.0
+failThreshold: 100
+profile:
+  name: qodana.recommended
+inspections:
+  LicenseAudit:
+    rules:
+      - key:
+          - "PROPRIETARY-LICENSE"
+        prohibited:
+          - "BSD-2-Clause"
+        allowed:
+          - "MIT"
+          - "BSD-3-Clause"
+          - "ISC"
+
+
+    detectorOptions:
+      deep: false
+      threshold: 0.8
+      includeText: true
